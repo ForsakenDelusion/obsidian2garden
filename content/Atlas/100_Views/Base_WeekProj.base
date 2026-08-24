@@ -1,0 +1,13 @@
+views:
+  - type: kanban
+    name: 表格
+    filters:
+      and:
+        - |
+          file.inFolder("Effort/400_Projects")
+          && type == "project"
+          && status == "active"
+          && file.mtime >= this.start_week
+          && file.mtime <= this.end_week
+    order:
+      - file.name

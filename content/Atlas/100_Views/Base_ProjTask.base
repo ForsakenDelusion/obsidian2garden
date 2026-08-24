@@ -1,0 +1,26 @@
+views:
+  - type: kanban
+    name: 任务看板
+    filters:
+      and:
+        - |-
+          file.inFolder(this.file.folder)
+          && type == "project-file"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+    boardColumns:
+      - todo
+      - in_progress
+      - completed
+      - archived
+    cardOpenBehavior: modal
+    newItemTemplate: Toolkit/00_Template/Zettelkasten/ProjTask.md
+    newItemProperties:
+      type: project-task
+      status: todo
+    showStandardAddButton: false
+    showQuickAddButton: true
+    quickAddChoice: Create_ProjTask

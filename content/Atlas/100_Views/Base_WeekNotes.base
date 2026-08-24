@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - |
+          file.inFolder("Atlas/000_Notes")
+          && (
+            (file.ctime >= this.start_week && file.ctime <= this.end_week)
+            || (file.mtime >= this.start_week && file.mtime <= this.end_week)
+          )
