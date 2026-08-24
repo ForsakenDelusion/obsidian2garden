@@ -290,7 +290,7 @@ plugins:
     enabled: true
     order: 50
     options:
-      theme: macos
+      theme: zen
 layout:
   groups:
     toolbar:
