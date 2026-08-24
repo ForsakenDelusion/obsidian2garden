@@ -287,7 +287,7 @@ plugins:
     enabled: true
     order: 50
     options:
-      theme: 80s-neon
+      theme: macos
 layout:
   groups:
     toolbar:
