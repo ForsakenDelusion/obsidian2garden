@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: zh-CN
-  baseUrl: delusion.uno
+  baseUrl: https://forsakendelusion.github.io/obsidian2garden/
   ignorePatterns:
     - private
     - templates
@@ -278,6 +278,13 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source:
+      name: quartz-themes
+      repo: github:saberzero1/quartz-themes
+      subdir: plugin
+    enabled: true
+    order: 50
+    options: {}
 layout:
   groups:
     toolbar:
