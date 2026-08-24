@@ -164,6 +164,8 @@ plugins:
     layout:
       position: left
       priority: 50
+    options:
+      title: Explorer
   - source: "@quartz-community/graph"
     enabled: true
     layout:
@@ -177,6 +179,7 @@ plugins:
       group: toolbar
       groupOptions:
         grow: true
+    options: {}
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
