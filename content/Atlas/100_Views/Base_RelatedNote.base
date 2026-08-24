@@ -1,9 +1,0 @@
-views:
-  - type: table
-    name: 表格
-    filters:
-      and:
-        - |
-          file.inFolder("Atlas/000_Notes")
-          && file != this.file
-          && (file.hasLink(this.file) || this.file.hasLink(file))
