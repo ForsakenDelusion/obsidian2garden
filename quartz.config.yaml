@@ -102,6 +102,7 @@ plugins:
   - source: "@quartz-community/hard-line-breaks"
     enabled: true
     order: 90
+    options: {}
   - source: "@quartz-community/ox-hugo"
     enabled: false
     order: 91
@@ -110,6 +111,7 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options: {}
   - source: "@quartz-themes/core"
     enabled: true
     options:
@@ -284,7 +286,8 @@ plugins:
       subdir: plugin
     enabled: true
     order: 50
-    options: {}
+    options:
+      theme: 80s-neon
 layout:
   groups:
     toolbar:
