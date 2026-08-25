@@ -1,15 +1,15 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Delusion's Garden
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
-  analytics:
-    provider: plausible
+  analytics: null
   locale: zh-CN
-  baseUrl: https://forsakendelusion.github.io/obsidian2garden/
+  baseUrl: https://delusion.uno
   ignorePatterns:
     - private
+    - ToolKit
     - templates
     - .obsidian
   theme:
@@ -112,11 +112,6 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
     options: {}
-  - source: "@quartz-themes/core"
-    enabled: true
-    options:
-      theme: default
-      mode: both
   - source: "@quartz-community/remove-draft"
     enabled: false
   - source: "@quartz-community/explicit-publish"
@@ -276,21 +271,6 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  - source: "@quartz-community/obsidian-plugin-excalidraw"
-    enabled: true
-    options:
-      enableInteraction: true
-      darkMode: auto
-      exportPadding: 20
-    order: 50
-  - source:
-      name: quartz-themes
-      repo: github:saberzero1/quartz-themes
-      subdir: plugin
-    enabled: true
-    order: 50
-    options:
-      theme: zen
 layout:
   groups:
     toolbar:

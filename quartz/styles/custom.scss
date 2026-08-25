@@ -2,3 +2,23 @@
 @use "./syncer";
 
 // put your custom CSS here!
+
+// Temporary Explorer layout overrides are disabled while testing the
+// plugin's default behavior. Restore these rules only if needed later.
+// @media all and (min-width: 801px) {
+//   .explorer.collapsed {
+//     flex: 0 1 1.5rem;
+//     width: auto;
+//     min-width: 0;
+//     min-height: 1.5rem;
+//   }
+//
+//   .explorer button.desktop-explorer {
+//     min-width: 0;
+//     width: 100%;
+//   }
+//
+//   .explorer button.desktop-explorer h2 {
+//     line-height: 1.5rem;
+//   }
+// }
