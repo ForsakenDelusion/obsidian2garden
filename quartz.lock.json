@@ -1,4 +1,11 @@
 {
   "version": "1.0.0",
-  "plugins": {}
+  "plugins": {
+    "quartz-obsidian-admonition": {
+      "source": "github:ForsakenDelusion/quartz-obsidian-admonition",
+      "resolved": "https://github.com/ForsakenDelusion/quartz-obsidian-admonition.git",
+      "commit": "089b92b0e0d7b675386c9df019a42d7e8db7c75f",
+      "installedAt": "2026-09-04T18:20:24.586Z"
+    }
+  }
 }

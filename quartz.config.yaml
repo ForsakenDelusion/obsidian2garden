@@ -282,6 +282,11 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: github:ForsakenDelusion/quartz-obsidian-admonition
+    enabled: true
+    options:
+      collapseIcon: true
+    order: 25
 layout:
   groups:
     toolbar:
