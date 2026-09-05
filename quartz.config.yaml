@@ -80,6 +80,10 @@ plugins:
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 50
+    options:
+      maxDepth: 5          # 显示 h1~h4
+      minEntries: 2        # 至少 2 个标题才显示
+      showByDefault: true
     layout:
       position: right
       priority: 30
@@ -247,7 +251,10 @@ plugins:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true
+    layout:
+      position: left
+      priority: 40
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
