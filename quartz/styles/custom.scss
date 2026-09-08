@@ -1,78 +1,17 @@
 @use "./variables.scss" as *;
 @use "./syncer";
 
-// ─── Cloned look & feel from jackyzha0.github.io (jzhao.xyz) ───────────
-// Pure-CSS parts only (palette/typography/selection/link ink) so they map
-// cleanly onto Quartz v5. The interactive JS bits (dappled-light Three.js
-// scene, playhtml collaborative cursors) aren't portable to the v5 YAML
-// layout, so they're intentionally omitted.
+// put your custom CSS here!
 
-::selection {
-  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-  color: var(--darkgray);
-}
+/* ---- Shared tag-pill interaction hooks ------------------------------ */
+/* Both the RecentNotes and the Content/Tag/Folder page lists render tag
+   pills. Give them a consistent hover feedback: lift, deepen the pill
+   background, and tint the text. Keep the transition snappy. */
 
-// Keep link hover in the link's own color family (a brighter shade of the
-// link color) rather than flipping to the warm --tertiary accent.
-[saved-theme] a:hover {
-  color: color-mix(in srgb, var(--secondary) 78%, white);
-}
-
-// "See N more" links: dimmed body text with an underline, instead of the
-// bold accent-colored default link styling.
-a.see-more {
-  font-weight: 400;
-  color: var(--darkgray);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  opacity: 0.6;
-
-  &:hover {
-    color: var(--darkgray);
-    opacity: 0.85;
-  }
-}
-
-// The "===" scene break becomes a vermilion second-ink mark (was muted gray)
-hr:after {
-  color: var(--tertiary);
-}
-
-// Inline article links: a vermilion "second ink" underline instead of the
-// pill wash. Scoped to article prose so nav/sidebar internal links stay clean.
-article a.internal {
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
-  text-decoration: underline;
-  text-decoration-color: var(--tertiary);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-
-  &:has(> img) {
-    text-decoration: none;
-  }
-  // tag chips keep their vermilion pill (matches TagList.css)
-  &.tag-link {
-    text-decoration: none;
-    background-color: color-mix(in srgb, var(--tertiary) 12%, transparent);
-  }
-}
-
-// Footnote reference markers read as the "second ink"
-.data-footnote-ref,
-a[data-footnote-ref] {
-  color: var(--tertiary);
-  font-weight: 600;
-}
-
-// ─── Existing tag-pill interaction (kept, harmonised with the new ink) ──
-
-/* BASE pill look (RecentNotes + Content/Tag/Folder lists) */
+/* BASE pill look (RecentNotes) */
 .recent-notes ul.tags > li > a.tag-link,
 li.section-li > .section > ul.tags > li > a.tag-link {
-  background-color: color-mix(in srgb, var(--tertiary) 12%, transparent);
+  background-color: var(--highlight);
   color: var(--secondary);
   border-radius: 8px;
   padding: 0.15rem 0.45rem;
