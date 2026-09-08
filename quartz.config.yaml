@@ -258,9 +258,12 @@ plugins:
     options:
       limit: 3
       showTags: false
+      hideTagPages: true
+      hideFolderPages: true
     layout:
       position: left
       priority: 40
+      display: desktop-only
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
