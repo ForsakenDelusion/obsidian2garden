@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: zh-CN
-  baseUrl: https://delusion.uno
+  baseUrl: delusion.uno
   ignorePatterns:
     - private
     - ToolKit
