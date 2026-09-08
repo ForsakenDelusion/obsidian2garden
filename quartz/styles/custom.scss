@@ -3,9 +3,48 @@
 
 // put your custom CSS here!
 
-/* RecentNotes: make the per-post tag list inline in a single row instead of
-   stacking vertically. The @quartz-community/recent-notes component renders
-   <ul class="tags"><li>...</li></ul> but ships no layout rules for it. */
+/* ---- Shared tag-pill interaction hooks ------------------------------ */
+/* Both the RecentNotes and the Content/Tag/Folder page lists render tag
+   pills. Give them a consistent hover feedback: lift, deepen the pill
+   background, and tint the text. Keep the transition snappy. */
+
+/* BASE pill look (RecentNotes) */
+.recent-notes ul.tags > li > a.tag-link,
+li.section-li > .section > ul.tags > li > a.tag-link {
+  background-color: var(--highlight);
+  color: var(--secondary);
+  border-radius: 8px;
+  padding: 0.15rem 0.45rem;
+  text-decoration: none;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, color 0.18s ease,
+    transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Hover feedback */
+.recent-notes ul.tags > li > a.tag-link:hover,
+li.section-li > .section > ul.tags > li > a.tag-link:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Press feedback for a subtle click feel */
+.recent-notes ul.tags > li > a.tag-link:active,
+li.section-li > .section > ul.tags > li > a.tag-link:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Keep the "#" prefix on all tag pills */
+.recent-notes ul.tags > li > a.tag-link::before,
+li.section-li > .section > ul.tags > li > a.tag-link::before {
+  content: "#";
+}
+
+/* ---- RecentNotes layout --------------------------------------------- */
 .recent-notes ul.tags {
   list-style: none;
   margin: 0.35rem 0 0 0;
@@ -20,36 +59,18 @@
   margin: 0;
 }
 
-/* Keep the "#" prefix and pill look consistent with the rest of the site. */
-.recent-notes ul.tags > li > a.tag-link {
-  background-color: var(--highlight);
-  color: var(--secondary);
-  border-radius: 8px;
-  padding: 0.15rem 0.45rem;
-  text-decoration: none;
-  line-height: 1.4;
+/* ---- Content / Tag / Folder page list layout ------------------------ */
+li.section-li > .section > ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-content: center;
 }
 
-.recent-notes ul.tags > li > a.tag-link::before {
-  content: "#";
+li.section-li > .section > ul.tags > li {
+  display: inline-block;
+  margin: 0;
 }
-
-// Temporary Explorer layout overrides are disabled while testing the
-// plugin's default behavior. Restore these rules only if needed later.
-// @media all and (min-width: 801px) {
-//   .explorer.collapsed {
-//     flex: 0 1 1.5rem;
-//     width: auto;
-//     min-width: 0;
-//     min-height: 1.5rem;
-//   }
-//
-//   .explorer button.desktop-explorer {
-//     min-width: 0;
-//     width: 100%;
-//   }
-//
-//   .explorer button.desktop-explorer h2 {
-//     line-height: 1.5rem;
-//   }
-// }
