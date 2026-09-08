@@ -3,6 +3,37 @@
 
 // put your custom CSS here!
 
+/* RecentNotes: make the per-post tag list inline in a single row instead of
+   stacking vertically. The @quartz-community/recent-notes component renders
+   <ul class="tags"><li>...</li></ul> but ships no layout rules for it. */
+.recent-notes ul.tags {
+  list-style: none;
+  margin: 0.35rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.recent-notes ul.tags > li {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Keep the "#" prefix and pill look consistent with the rest of the site. */
+.recent-notes ul.tags > li > a.tag-link {
+  background-color: var(--highlight);
+  color: var(--secondary);
+  border-radius: 8px;
+  padding: 0.15rem 0.45rem;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.recent-notes ul.tags > li > a.tag-link::before {
+  content: "#";
+}
+
 // Temporary Explorer layout overrides are disabled while testing the
 // plugin's default behavior. Restore these rules only if needed later.
 // @media all and (min-width: 801px) {
