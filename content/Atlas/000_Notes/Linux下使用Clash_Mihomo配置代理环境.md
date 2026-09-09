@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-08-22
-modified: 2026-09-08T11:53:13.630Z
+modified: 2026-09-09T02:55:19.353Z
 tags:
   - Linux
   - 网络环境
@@ -77,13 +77,8 @@ bash uninstall.sh
 
 ## 配置订阅
 
-订阅地址：
-
-> [!warning] 敏感信息
-> 以下链接包含订阅 token，请勿公开分享；如已泄露，建议及时更换订阅链接。
-
-```text
-https://cdn-sled-edge22.thehtler.com/api/v1/client/subscribe?token=0e72790d700246356e54b29569c34ead
+```
+clashsub add xxx(扭拟灯蛾订阅地址)
 ```
 
 ## 配置 Web 控制面板
