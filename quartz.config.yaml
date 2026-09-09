@@ -260,6 +260,7 @@ plugins:
       showTags: false
       hideTagPages: true
       hideFolderPages: true
+      linkToMore: archive
     layout:
       position: left
       priority: 40
