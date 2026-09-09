@@ -4,8 +4,8 @@
     "quartz-archive": {
       "source": "github:ForsakenDelusion/quartz-archive",
       "resolved": "https://github.com/ForsakenDelusion/quartz-archive.git",
-      "commit": "80d8d7d1ca576dbbc5eb153e64a593a2691b56fb",
-      "installedAt": "2026-09-09T04:29:42.656Z"
+      "commit": "13c215b952cdd90248fc90f4c37b8aaab2ae26fd",
+      "installedAt": "2026-09-09T05:10:09.967Z"
     },
     "quartz-obsidian-admonition": {
       "source": "github:ForsakenDelusion/quartz-obsidian-admonition",
