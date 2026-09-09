@@ -303,6 +303,13 @@ plugins:
     options:
       collapseIcon: true
     order: 25
+  - source: github:ForsakenDelusion/quartz-archive
+    enabled: true
+    options:
+      title: 归档
+      slug: archive
+      emptyText: 暂无文章
+    order: 12
 layout:
   groups:
     toolbar:
